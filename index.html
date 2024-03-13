@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Code</title>
+</head>
+
+<body>
+    <h1>Aula Clean Code</h1>
+    <label for="primeironumero">Valor</label>
+    <input type="text" id="primeironumero">
+    <br><br>
+    <label for="segundonumero">Valor</label>
+    <input type="text" id="segundonumero">
+    <br><br>
+    <input type="button" value="Somar" onclick="somar()">
+    <input type="button" value="Subtrair" onclick="subtrair()">
+    <br><br>
+    <label for="resultado">Resultado</label>
+    <input type="text" id="resultado" readonly>
+</body>
+
+<script>
+    function somar() {
+        var primeironumero = document.getElementById("primeironumero").value
+        var segundonumero = document.getElementById("segundonumero").value
+
+        console.log("o valor do primeiro numero:", primeironumero);
+        console.log("o valor do segundo numero:", segundonumero);
+
+
+        if (parseInt(primeironumero) > 0 && parseInt(segundonumero) > 0) {
+            var resultado = parseInt(primeironumero) + parseInt(segundonumero)
+            console.log("o valor do resultado:", resultado);
+            document.getElementById("resultado").value = resultado;
+        } else {
+            document.getElementById("resultado").value = "";
+        }
+
+        var resultado = parseInt(primeironumero) + parseInt(segundonumerob)
+
+        document.getElementById("resultado").value = resultado;
+    }
+
+    function subtrair() {
+        var primeironumero = document.getElementById("primeironumero").value
+        var segundonumero = document.getElementById("segundonumero").value
+
+        console.log("o valor do primeiro numero:", primeironumero);
+        console.log("o valor do segundo numero:", segundonumero);
+
+
+        if (parseInt(primeironumero) > 0 && parseInt(segundonumero) > 0) {
+            var resultado = parseInt(primeironumero) - parseInt(segundonumero)
+            console.log("o valor do resultado:", resultado);
+            document.getElementById("resultado").value = resultado;
+        } else {
+            document.getElementById("resultado").value = "";
+        }
+
+        var resultado = parseInt(primeironumero) - parseInt(segundonumero)
+
+        document.getElementById("resultado").value = resultado;
+    }
+
+    function validarOperacaoMatematica(numeroUm, numeroDois) {
+        if (validarNumeroPositivo(numeroUm) &&
+            validarNumeroPositivo(numeroDois)) {
+            return true;
+        }
+        return false;
+    }
+
+    function valorNumeroPositivo(numero) {
+        if (numero > 0) {
+            return true;
+        }
+        return false;
+    }
+
+    function logar(mensagem) {
+        console.log(mensagem);
+    }
+
+</script>
+
+</html>
